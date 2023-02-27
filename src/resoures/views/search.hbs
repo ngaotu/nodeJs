@@ -1,0 +1,31 @@
+<div id="search">
+  <div class="search-form">
+      <form method="GET" action="/blog">
+        <div class="mb-3">
+          <label for="searchInputBlog" class="form-label">Search blog</label>
+          <input type="search" name="q" class="form-control" id="searchInputBlog">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <div class="search-login">
+  <form method="POST">
+    <div class="mb-3">
+      <div id="emailHelp" class="form-text" style="text-align: center; font-size:20px">LOGIN</div>
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" name="pwd" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">I'm not a robot</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+
+</div>
+{{!-- thuoc tinh mac dinh cua submit: gui len request(lay gia tri cua the input co thuoc tinh  name) --}}

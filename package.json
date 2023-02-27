@@ -4,8 +4,9 @@
   "description": "\"first blog using nodejs\"",
   "main": "main.js",
   "scripts": {
+    "beautiful": "lint-staged",
     "start": "nodemon --inspect src/main.js",
-    "watch":"sass --watch src/resoures/scss/app.scss src/public/css/app.css" ,
+    "watch": "sass --watch src/resoures/scss/app.scss src/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,9 +28,15 @@
     "express": "^4.18.2",
     "express-handlebars": "^6.0.7"
   },
+  "lint-staged":{
+    "src/**/*.{js,json,scss}": "prettier --single-quote --tab-width 4 --trailing-comma all --write"
+  },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20",
+    "prettier": "^2.8.4",
     "sass": "^1.58.3"
   }
 }

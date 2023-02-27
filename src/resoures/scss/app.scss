@@ -1,17 +1,21 @@
 @import 'variable';
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-.content{
+.content {
     padding-top: $header-height;
     display: flex;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
     color: $primary-color;
 }
-header{
+header {
     height: $header-height;
+}
+.search-form {
+    width: 400px;
+    margin-bottom: 46px;
 }
