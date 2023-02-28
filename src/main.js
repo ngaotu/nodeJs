@@ -5,7 +5,10 @@ const { engine } = require('express-handlebars');
 const router = require('./routes/index');
 const app = express();
 const port = 3000;
+// connect to db
+const db = require('./config/db');
 
+db.connect();
 // static files => den public
 app.use(express.static(path.join(__dirname, 'public')));
 console.log(path.join(__dirname));
@@ -28,7 +31,7 @@ app.engine(
 // add router => controller
 router(app);
 
-       app.set('view engine', 'hbs');
+app.set('view engine', 'hbs');
 
 app.set('views', path.join(__dirname, 'resoures/views'));
 
